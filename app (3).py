@@ -26,11 +26,11 @@ st.header("Enter Car Details")
 car_id = st.number_input("Car ID", value=1)
 brand = st.number_input("Brand (Encoded)", value=1)
 year = st.number_input("Year", value=2020)
-engine_size = st.number_input("Engine Size", value=2.0)
+engine_size = st.number_input("Engine Size")
 fuel = st.number_input("Fuel Type (Encoded)", value=1)
-trans = st.number_input("Transmission (Encoded)", value=1)
-mileage = st.number_input("Mileage", value=50000)
-model_code = st.number_input("Model (Encoded)", value=1)
+trans = st.number_input("Transmission (Encoded)")
+mileage = st.number_input("Mileage")
+model_code = st.number_input("Model (Encoded)")
 
 # Prediction
 if st.button("Predict Price"):
@@ -43,10 +43,11 @@ st.write("Model expects features:", model.n_features_in_)
 X = [['Car ID', 'brand_new', 'Year', 'Engine Size', 'fuel_new', 'trans_new', 'Mileage', 'mod_new']]
 
 input_data = [[
-    car_id,           # Car ID
-    brand,            # Brand (encoded) - Changed from brand_encoded
-    year,             # Year
-    engine_size,      # Engine Size       # Model (encoded) - Changed from model_encoded
+    engine_size,      # Engine Size       
+    fuel,
+    mileage,
+    model_code
+    
 ]]
 
 # Debug line
