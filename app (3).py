@@ -55,7 +55,7 @@ st.write("Input shape:", len(input_data[0]))
 st.write("Model expects:", model.n_features_in_)
 
 price = model.predict(input_data)[0]
-st.success(f"Predicted Car Price: ₹{price:,.2f}")
+st.success(f"Predicted Car Price: ₹{price:}")
 
 import numpy as np
 input_array = np.array(input_data)
