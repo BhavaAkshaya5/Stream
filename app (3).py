@@ -11,7 +11,7 @@ import streamlit as st
 
 st.title("Hello Streamlit 👋")
 st.write("This is a simple app!")
-
+st.balloons()
 import streamlit as st
 import pickle
 
