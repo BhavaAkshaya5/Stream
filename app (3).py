@@ -34,7 +34,7 @@ model_code = st.number_input("Model (Encoded)")
 
 # Prediction
 if st.button("Predict Price"):
-    data = [[car_id, brand, year, engine_size, fuel, trans, mileage, model_code]]
+    data = [[engine_size, fuel,mileage, model_code]]
     price = model.predict(data)[0]
     st.success(f"Predicted Price: ₹{price:,.2f}")
 
